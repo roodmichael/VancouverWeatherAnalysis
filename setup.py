@@ -7,8 +7,8 @@ import datetime as dt
 SEP = ','
 ENCODING = 'utf-8'
 
-# data has 25 rows of meta-data in every file
-SKIP_ROWS = 25
+# data has 26 rows of meta-data in every file
+SKIP_ROWS = 26
 
 # in/out file paths
 RAW_DATA_DIR = os.path.join("./data/raw/")
@@ -17,20 +17,15 @@ OUT_DATA_DIR = os.path.join("./data/")
 OUT_DATA_PATH = "daily_precip_data.csv"
 
 # fields to keep in this dataset
-COL_FILTER = ['Date/Time','Year','Month','Day','Total Precip (mm)']
-
-# weekday to day of week conversion
-DAY_OF_WEEK = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun']
+COL_FILTER = [0,1,2,3,5,7,9,19]
+COL_NAMES = ['date','year','month','day','max_temp','min_temp','mean_temp','total_precip']
 
 # do transforms on dataset
 def transform(df):
-    # rename columns
-    df.columns = ["date","year","month","day","total_precip"]
-    
     # add day of week to dataset
     strpformat = '%Y-%m-%d'
     weekday = lambda date:dt.datetime.strptime(date, strpformat).weekday()
-    dayofweek = lambda weekday:DAY_OF_WEEK[weekday]
+    dayofweek = lambda weekday:calendar.day_name[weekday]
     df.insert(1,'dow', df['date'].apply(weekday).apply(dayofweek))
 
     # add binary has precipitation or not
@@ -47,7 +42,7 @@ def appenddf(df1, df2):
 
 # import csv file and return a dataframe
 def importfile(filepath):
-    df = pd.read_csv(filepath, skiprows=SKIP_ROWS, encoding=ENCODING, usecols=COL_FILTER)
+    df = pd.read_csv(filepath, skiprows=SKIP_ROWS, encoding=ENCODING, names=COL_NAMES, usecols=COL_FILTER)
     return df
 
 # iterate over raw data files and import into data files
@@ -69,10 +64,6 @@ def writedf(df, filepath):
 def imputemissingdata(df, cols):
     # data frame from alternate sources
     altdf = importrawfiles(RAW_DATA_ALT_DIR)
-    #altdf = transform(altdf)
-    
-    # break out of this and throw an error if the alternate data is not
-    # the same length as the original dataframe.
     
     # look for missing precipitation data. replace with alternate data
     for col in cols:
@@ -83,9 +74,9 @@ def imputemissingdata(df, cols):
         # file diagnostic - number of remains rows with missing values.
         # write file diagnostic
 
-    # any further missing values assume no precipitation
-    # need to decide on a better method of filling in remaining missing data
-    df[col].fillna(0.0, inplace=True)
+        # any further missing values forward fill
+        # need to decide on a better method of filling in remaining missing data
+        df[col].fillna(method='ffill', inplace=True)
 
     return df 
     
@@ -96,7 +87,8 @@ def main():
     finaldf = importrawfiles(RAW_DATA_DIR)
     
     # replace missing values with data from nearby weather station
-    finaldf = imputemissingdata(finaldf, ['Total Precip (mm)'])
+    imputecols = ['max_temp','min_temp','mean_temp','total_precip']
+    finaldf = imputemissingdata(finaldf, imputecols)
     
     # clean up final data frame    
     finaldf = transform(finaldf)
