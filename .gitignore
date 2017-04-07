@@ -1,3 +1,5 @@
 .DS_Store
 /data/*
 !/data/raw/
+/charts/*.html
+/charts/*.png
