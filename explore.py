@@ -78,3 +78,15 @@ p = ggplot(df_year_count, aes(x="year", weight="any_precip")) +\
     theme_bw()
 filename = OUT_CHART_DIR + "numdays_precip_year.png"
 p.save(filename=filename)
+
+## ###############################
+## Temperature Charts
+## ###############################
+
+# plot mean temp since 2010
+p = ggplot(df, aes(x='date',y='mean_temp')) +\
+    geom_line() +\
+    xlab('Day') + ylab('Mean Temperature (C)')
+p
+filename = OUT_CHART_DIR + "mean_temp_daily_cont.png"
+p.save(filename=filename)
