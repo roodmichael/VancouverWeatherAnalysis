@@ -1,4 +1,5 @@
 #!/usr/bin/python
+import calendar
 import pandas as pd
 import os
 import datetime as dt
@@ -26,8 +27,15 @@ def transform(df):
     strpformat = '%Y-%m-%d'
     weekday = lambda date:dt.datetime.strptime(date, strpformat).weekday()
     dayofweek = lambda weekday:calendar.day_name[weekday]
-    df.insert(1,'dow', df['date'].apply(weekday).apply(dayofweek))
+    df.insert(1, 'dow', df['date'].apply(weekday).apply(dayofweek))
 
+    is_weekend = lambda dow: 1 if(dow in ['Saturday','Sunday']) else 0
+    df.insert(2, 'is_weekend', df['dow'].apply(is_weekend))
+
+    # add week number to dataset
+    week_num = lambda date:dt.datetime.strptime(date, strpformat).isocalendar()[1]
+    df.insert(1, 'week_num', df['date'].apply(week_num))
+    
     # add binary has precipitation or not
     df['any_precip'] = df['total_precip'].apply(lambda x: 0 if(x<=0) else 1)
     
