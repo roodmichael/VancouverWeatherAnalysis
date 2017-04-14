@@ -1,0 +1,44 @@
+languageCode = "en-us"
+title        = "Weather Analysis"
+builddrafts  = false
+layoutdir    = "layouts"
+theme        = "hyde"
+
+[permalinks]
+fixed = ":title/"
+blog = "blog/:slug/"
+
+[[menu.main]]
+name       = "Posts"
+weight     = -130
+identifier = "post"
+url        = "/post/"
+
+[[menu.main]]
+name       = "Code"
+weight     = -120
+identifier = "code"
+url        = "https://github.com/roodmichael/VancouverWeatherAnalysis"
+
+[[menu.main]]
+name       = "Data Source"
+weight     = "-110"
+identifier = "datasource"
+url        = "http://climate.weather.gc.ca/historical_data/search_historic_data_e.html"
+
+[params]
+latestpostscount = 10
+i18n_flags       = false
+author           = "Michael Rood"
+cachebuster      = true
+dateform         = "Jan 2, 2006"
+dateformfull     = "Mon Jan 2 2006 15:04:05 MST"
+description      = "Vancouver"
+email            = "rood.michael@gmail.com"
+extracssfiles    = []
+github           = "//github.com/roodmichael"
+highlightjs      = true
+lang             = "en"
+noshowreadtime   = false
+
+avatar           = ""

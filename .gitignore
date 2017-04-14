@@ -3,3 +3,4 @@
 !/data/raw/
 /charts/*.html
 /charts/*.png
+!/presentation/public/*
