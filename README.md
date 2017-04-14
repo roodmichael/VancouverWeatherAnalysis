@@ -1,8 +1,4 @@
 # VancouverWeatherAnalysis
-
-> Note: This repository is still a WIP
-
-## Description
 A repository to play with Rodeo IDE and do basic analysis on Vancouver weather data. Primary goals are:
 
 1. Get familiar with Rodeo IDE
@@ -17,5 +13,11 @@ Weather is collected from the [Government of Canada historical weather and clima
 1. Python
 
 ## To run analysis
-1. clone repository
-2. in terminal, from main directory run "python setup.py"
+1. Clone repository
+2. In terminal, from main directory run "python setup.py"
+3. In terminal, from main directory run "python explore.py"
+4. In terminal, from main directory run "python analysis.py"
+
+## To view the results
+1. All charts and tables are generated in the /charts directory.
+2. You can check out a [presentation of results here](http://htmlpreview.github.io/?https://github.com/roodmichael/VancouverWeatherAnalysis/blob/master/presentation/public/index.html).
