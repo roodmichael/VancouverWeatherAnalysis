@@ -11,6 +11,7 @@ Weather is collected from the [Government of Canada historical weather and clima
 
 ## Prerequisites
 1. Python
+2. GGPlot
 
 ## To run analysis
 1. Clone repository

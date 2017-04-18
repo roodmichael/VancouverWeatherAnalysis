@@ -11,4 +11,4 @@ This analysis defines a "beach day" as any day without recorded rain and with te
 
 My minimum beach-going temperature is 24 degrees and since 2000 there have been an average of 27 clothes-shedding beach lounging days per year. 2015 was an exceptionally warm outlier year with 49 such days. I don't imagine we'll be seeing one of those again soon.
 
-![Number of days with beach weather](/img/num_days_beach_weather.png)
+![Number of days with beach weather](img/num_days_beach_weather.png)

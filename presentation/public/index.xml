@@ -6,8 +6,44 @@
     <description>Recent content on Weather Analysis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 09 Apr 2017 15:52:37 -0700</lastBuildDate>
+    <lastBuildDate>Wed, 12 Apr 2017 17:33:57 -0700</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>BBQ days per year</title>
+      <link>/post/days-per-year-can-bbq/</link>
+      <pubDate>Wed, 12 Apr 2017 17:33:57 -0700</pubDate>
+      
+      <guid>/post/days-per-year-can-bbq/</guid>
+      <description>&lt;p&gt;It rains a lot in Vancouver. And while your beach-going days will be numbered and cherished there are a surprising number of barbeque days thanks to temperate climate. In fact, since 2000 there have been an average of 112 days per year you can comfortably grill a dead animal outside.&lt;/p&gt;
+
+&lt;p&gt;This analysis calculates a barbeque day as a day at or above 15C without rain. These light jacket days define the Northwest, Vancouver in particular. The number of days in this temperate range are also consistent from year to year with 2015 being the only exceptional year.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;img/num_days_can_bbq.png&#34; alt=&#34;Number of days with bbq weather&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;With so many barbeque days per year, it works out to about 19 weekends per year on average that you can count on decent barbequing weather.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;img/num_weekends_can_bbq.png&#34; alt=&#34;Number of weekends with bbq weather&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Umbrella days per year</title>
+      <link>/post/days-need-an-umbrella/</link>
+      <pubDate>Wed, 12 Apr 2017 17:33:57 -0700</pubDate>
+      
+      <guid>/post/days-need-an-umbrella/</guid>
+      <description>&lt;p&gt;From fall to spring Vancouver receives upwards of 1000 mm of precipitation on average and is a legitimately gloomy place to live from October to March. Mercifully, since the bulk of our rain falls between fall and spring, our summers (usually) cannot be beat with often little rain and relatively temperate weather.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;img/avg_precip_month.png&#34; alt=&#34;Average precipitation per month&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;All of this rain translates to about 185 days per year with precipitation. In other words we carry an umbrella for half the year. Especially in November. November sucks.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;img/num_days_need_umbrella.png&#34; alt=&#34;Number of days need an umbrella&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This analysis counts any precipitation as rain. In general this is fair since at lower elevation the snow tends to be wet and miserable anyhow. In fact, I think Vancouver needs a better word for rain. Perhaps a word from another language that translates to abject misery?&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Beach days per year</title>
@@ -21,7 +57,17 @@
 
 &lt;p&gt;My minimum beach-going temperature is 24 degrees and since 2000 there have been an average of 27 clothes-shedding beach lounging days per year. 2015 was an exceptionally warm outlier year with 49 such days. I don&amp;rsquo;t imagine we&amp;rsquo;ll be seeing one of those again soon.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;/img/num_days_beach_weather.png&#34; alt=&#34;Number of days with beach weather&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;img/num_days_beach_weather.png&#34; alt=&#34;Number of days with beach weather&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Days per year Korean women need sunscreen</title>
+      <link>/post/days-korean-woman-needs-sunscreen/</link>
+      <pubDate>Sat, 08 Apr 2017 07:03:35 -0700</pubDate>
+      
+      <guid>/post/days-korean-woman-needs-sunscreen/</guid>
+      <description>&lt;p&gt;This is a trick question. The answer is always 365 regardless of climate.&lt;/p&gt;
 </description>
     </item>
     
